@@ -4,6 +4,7 @@ body {
     margin: 0;
     background-image: radial-gradient(#464646 5%, #121212 5%);
     background-position: 0 0;
+    background-attachment: fixed;
     background-size: 30px 30px;
     height: 100vh;
     background-color: #000;
@@ -15,12 +16,16 @@ body {
 
 header {
     display: flex;
-    padding: 2em;
+    margin: 2em;
+    width: 100%;
+    justify-content: center;
+    transition: top 250ms;
+    top: 0;
+    position: fixed;
+    z-index: 900;
     nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        z-index: 30;
+        padding: 2em;
+        border-radius: 1em;
         ul {
             margin: 0;
             display: flex;
@@ -35,6 +40,8 @@ header {
                     font-family: 'termina';
                     text-decoration: none;
                     color: #fff;
+                    position: relative;
+                    z-index: 900;
                     &:hover {
                         color: #222121;
                     }
@@ -49,6 +56,7 @@ header {
 }
 
 main {
+    margin-top: 10em;
     .error {
         display: flex;
         justify-content: center;
@@ -105,7 +113,7 @@ main {
             border-radius: 1em;
             height: 20em;
             margin: 1em;
-            background-image: url('/public/img/accueil.jpg');
+            background-image: url('../img/accueil.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             padding: 1em;
@@ -125,13 +133,13 @@ main {
             border-radius: 1em;
             margin: 1em;
             justify-content: space-between;
-            background-image: url('/public/img/exeaccueil.svg');
+            background-image: url('../img/nc3.jpeg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             overflow: hidden;
             &:nth-last-child(1) {
-                background-image: url('/public/img/crepe.jpg');
+                background-image: url('../img/crepe.jpg');
                 border-radius: 0;
             }
             .main__row__text {
@@ -150,17 +158,27 @@ main {
                     font-size: 1.5em;
                 }
                 a {
+                    color: #03FFB0;
                     position: relative;
                     z-index: 30;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: #464646dc;
-                    color: #fff;
-                    padding: 0.5em;
-                    text-decoration: none;
                     &:hover {
-                        text-decoration: underline;
+                        color: #000000;
+                    }
+                }
+                .class {
+                    a {
+                        position: relative;
+                        z-index: 30;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #464646dc;
+                        color: #fff;
+                        padding: 0.5em;
+                        text-decoration: none;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -217,7 +235,7 @@ main {
                 background-color: #2B4F9C;
                 border-radius: 1em;
                 &:nth-child(3) {
-                    background-image: url('/public/img/exev2bleu.svg');
+                    background-image: url('../img/exev2bleu.svg');
                     background-size: cover;
                     background-color: transparent;
                     background-position: center;
@@ -306,9 +324,19 @@ main {
             }
         }
     }
+    .member__band {
+        display: flex;
+        justify-content: center;
+        h1 {
+            color: #fff;
+            font-family: 'termina';
+        }
+    }
     .member {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
         .member__card {
             display: flex;
@@ -318,41 +346,46 @@ main {
             border-radius: 1em;
             justify-content: center;
             overflow: hidden;
-            &:nth-last-child(1) {
-                background-image: url('/public/img/exev2bleu.svg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-color: transparent;
+            width: 30%;
+            position: relative;
+            &:hover span {
+                opacity: 1;
             }
-            .member__text {
-                text-align: center;
-                width: 100%;
-                margin: 2em 0;
+            span {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                transition: 250ms;
+                left: 0;
+                opacity: 0;
+                background-color: #00000048;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                right: 0;
                 h1 {
-                    font-family: 'termina';
-                    font-weight: 700;
                     margin: 0;
-                    font-size: 2em;
                     padding: 0;
-                    color: #fff;
                 }
-                span {
-                    font-family: 'termina';
-                    font-weight: 300;
-                    font-size: 1em;
+                p {
                     margin: 0;
                     padding: 0;
-                    color: rgb(202, 202, 202);
                 }
             }
-            .member__card__img {
-                width: 100%;
-                img {
-                    display: flex;
-                    margin: auto;
-                    width: 20%;
-                }
+            &:hover img {
+                transform: scale(1.1);
+            }
+            //     &:nth-last-child(1) {
+            //     background-image: url('../img/exev2bleu.svg');
+            //     background-position: center;
+            //         background-repeat: no-repeat;
+            //             background-size: cover;
+            //      background-color: transparent;
+            //         }
+            img {
+                height: auto;
+                transition: 250ms;
             }
         }
     }
@@ -408,7 +441,7 @@ html.is-animating .transition-fade {
 }
 
 #bg__svg {
-    background-image: url('/public/img/exev2bleu.svg');
+    background-image: url('../img/exev2bleu.svg');
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -588,5 +621,5 @@ html.is-animating .transition-fade {
 }
 
 #bg_mine {
-    background-image: url('/public/img/minecraft.jpg');
+    background-image: url('../img/nc3.jpeg');
 }

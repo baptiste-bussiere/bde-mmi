@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <link rel="stylesheet" href="/public/css/style.css">
     <title>.EXE - PROJETS</title>
@@ -13,19 +14,10 @@
 
 <body id="bod">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <header>
+    <header id="navbar">
+
         <nav>
-            <ul data-blobity-magnetic="false" id="responsive__menu">
-                <li>
-                    <button data-blobity-magnetic="false" class="nav__cross" id="unPop"><i class="fas fa-times"></i></button>
-                </li>
-                <li>
-                    <button data-blobity-magnetic="false" class="nav__menu" id="unPop" onclick="window.location.href='/views/projet.html'">Projets</button>
-                </li>
-                <li>
-                    <button data-blobity-magnetic="false" class="nav__menu" id="unPop" onclick="window.location.href='/views/membres.html'">Membres</button>
-                </li>
-            </ul>
+
             <ul>
 
                 <li>
@@ -33,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a href="/views/index.html"><img src="/public/img/logo_min.svg" alt=""></a>
+                    <a href="/index.html"><img src="/public/img/logo_min.svg" alt=""></a>
                 </li>
                 <li>
                     <a id="scred" href="/views/projet.html">Projets</a>
@@ -44,6 +36,10 @@
 
 
             </ul>
+            <div class="back">
+
+
+            </div>
         </nav>
     </header>
     <main id="swup" class="transition-fade">
@@ -239,10 +235,23 @@
         <span><a href="https://workpage.baptiste-bussiere.fr">Baptiste B.</a></span>
     </footer>
 
-
+    <script src="../bundle.js"></script>
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
-    <script src="https://cdn.blobity.dev/by.js?licenseKey=E5B78DAF-656D417F-B59418EB-C1CD156B"></script>
-    <script src="/public/js/script.js"></script>
+    <script src="../public/js/script.js"></script>
+
+    <script src="../public/js/blo.js"></script>
+
+    <script>
+        const blobity = new Blobity({
+            zIndex: "20",
+            focusableElementsOffsetX: "5",
+            magnetic: "true",
+            focusableElementsOffsetY: "5",
+            font: "courier",
+            fontWeight: "400",
+            color: "'rgb(3, 255, 176)'"
+        });
+    </script>
     <script src="https://kit.fontawesome.com/b28bfc0ccb.js" crossorigin="anonymous"></script>
 
 

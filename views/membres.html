@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/css/style.css">
     <link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>.EXE - MEMBRES</title>
 </head>
@@ -15,18 +16,8 @@
 
     <header>
 
-        <nav>
-            <ul data-blobity-magnetic="false" id="responsive__menu">
-                <li>
-                    <button data-blobity-magnetic="false" class="nav__cross" id="unPop"><i class="fas fa-times"></i></button>
-                </li>
-                <li>
-                    <button data-blobity-magnetic="false" class="nav__menu" id="unPop" onclick="window.location.href='/views/projet.html'">Projets</button>
-                </li>
-                <li>
-                    <button data-blobity-magnetic="false" class="nav__menu" id="unPop" onclick="window.location.href='/views/membres.html'">Membres</button>
-                </li>
-            </ul>
+        <nav id="navbar">
+
             <ul>
 
                 <li>
@@ -34,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a href="/views/index.html"><img src="/public/img/logo_min.svg" alt=""></a>
+                    <a href="/index.html"><img src="/public/img/logo_min.svg" alt=""></a>
                 </li>
                 <li>
                     <a id="scred" href="/views/projet.html">Projets</a>
@@ -45,120 +36,136 @@
 
 
             </ul>
+            <div class="back">
+
+
+            </div>
         </nav>
     </header>
     <main id="swup" class="transition-fade">
         <div class="__main">
 
 
-
+            <div class="member__band">
+                <h1>TEAM BDE</h1>
+            </div>
 
             <div class="member">
+
                 <div class="member__card">
-                    <div class="member__text">
-                        <h1>Anaïs</h1><span>Présidente</span>
-                    </div>
-                    <div class="member__card__img">
 
-                        <img src="/public/img/portrait/anais.png" alt="">
+                    <img src="/public/img/portrait/anais.png" alt="">
+                    <a data-no-blobity href="https://mmi21e11.mmi-troyes.fr">
+                        <span><h1>Presidente</h1><br><p>@anais.martor</p></span> </a>
+                </div>
 
-                    </div>
+
+                <div class="member__card">
+
+                    <img src="/public/img/portrait/robin.png" alt="">
+
+
+
+                    <a data-no-blobity href="https://mmi21h07.mmi-troyes.fr">
+                        <span><h1>Vice-president</h1><br><p>@robin.lanfranchi</p></span>
+                    </a>
+                </div>
+
+                <div class="member__card">
+
+                    <img src="/public/img/portrait/sam.png" alt="">
+                    <a data-no-blobity href="https://mmi21c10.mmi-troyes.fr">
+                        <span><h1>Secretaire</h1><br><p>@samuel.jarry</p></span>
+                    </a>
+
 
 
 
 
                 </div>
+
                 <div class="member__card">
-                    <div class="member__text">
-                        <h1>Robin</h1><span>Vice-président</span>
-                    </div>
-                    <div class="member__card__img">
-                        <img src="/public/img/portrait/robin.png" alt="">
 
-                    </div>
+                    <img src="/public/img/portrait/antoine.png" alt="">
+                    <a data-no-blobity href="https://mmi21f11.mmi-troyes.fr">
+
+                        <span><h1>Communicant</h1><br><p>@antoine.lauzis</p></span>
 
 
-
-                </div>
-                <div class="member__card">
-                    <div class="member__text">
-                        <h1>Samuel</h1><span>Secrétaire</span>
-                    </div>
-                    <div class="member__card__img">
-                        <img src="/public/img/portrait/sam.png" alt="">
-
-                    </div>
-
-
-
-
-                </div>
-                <div class="member__card">
-                    <div class="member__text">
-                        <h1>Hugo</h1><span>Communiquant</span>
-                    </div>
-                    <div class="member__card__img">
-                        <img src="/public/img/portrait/hugo.png" alt="">
-
-                    </div>
-
-
-
-
-                </div>
-                <div class="member__card">
-                    <div class="member__text">
-                        <h1>Antoine</h1><span>Communiquant</span>
-                    </div>
-                    <div class="member__card__img">
-                        <img src="/public/img/portrait/antoine.png" alt="">
-
-                    </div>
-
-
-
-
-                </div>
-                <div class="member__card">
-                    <div class="member__text">
-                        <h1>Milla</h1><span>Créatrice & Graphiste</span>
-                    </div>
-                    <div class="member__card__img">
-                        <img src="/public/img/portrait/fonction02.png" alt="">
-
-                    </div>
-
-
-
-
-                </div>
-                <div class="member__card">
-                    <div class="member__text">
-                        <h1>Maé</h1><span>Créatrice & Graphiste</span>
-                    </div>
-                    <div class="member__card__img">
-                        <img src="/public/img/portrait/mae.png" alt="">
-
-                    </div>
-
-
-
-
-                </div>
-                <div class="member__card">
-                    <div class="member__text">
-                        <h1>Alban</h1><span>Trésorier</span>
-                    </div>
-                    <div class="member__card__img">
-                        <img src="/public/img/portrait/alban.png" alt="">
-
-                    </div>
-
-
+                    </a>
 
                 </div>
                 <div class="member__card">
 
+
+                    <img src="/public/img/portrait/deodat.png" alt="">
+
+
+                    <a data-no-blobity href="https://mmi21e13.mmi-troyes.fr">
+                        <span><h1>Graphiste</h1><p>@milla.paves</p></span>
+
+                    </a>
+
+                </div>
+                <div class="member__card">
+
+
+                    <img src="/public/img/portrait/mae.png" alt="">
+                    <a data-no-blobity href="https://mmi21e15.mmi-troyes.fr">
+
+                        <span><h1>Graphiste</h1><p>@mae.rossi</p></span>
+
+
+
+                    </a>
+                </div>
+                <div class="member__card">
+
+
+                    <img src="/public/img/portrait/alban.png" alt="">
+
+                    <a data-no-blobity href="https://mmi21h03.mmi-troyes.fr">
+                        <span><h1>Tresorier</h1><br><p>@alban.de-waubert</p></span>
+
+                    </a>
+
+                </div>
+                <div class="member__card">
+
+
+                    <img src="/public/img/portrait/alban.png" alt="">
+
+                    <a data-no-blobity href="https://mmi21h03.mmi-troyes.fr">
+                        <span><h1>Comumnicant</h1><br><p>@paco.garcia</p></span>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="member__band">
+                <h1>TEAM HELPER</h1>
+            </div>
+            <div class="member">
+
+
+                <div class="member__card">
+
+
+                    <img src="/public/img/portrait/baptiste.png" alt="">
+
+                    <a data-no-blobity href="https://mmi21d03.mmi-troyes.fr">
+                        <span><h1>Developpeur</h1><br><p>@baptiste.bussiere</p></span>
+                    </a>
+                </div>
+                <div class="member__card">
+
+
+                    <img src="/public/img/portrait/alban.png" alt="">
+
+                    <a data-no-blobity href="https://mmi21d10.mmi-troyes.fr">
+                        <span><h1>Developpeur</h1><br><p>@evan.gruchot</p></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -182,11 +189,20 @@
     </footer>
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.blobity.dev/by.js?licenseKey=E5B78DAF-656D417F-B59418EB-C1CD156B"></script>
-    <script src="/public/js/script.js"></script>
+    <script src="../public/js/script.js"></script>
+    <script src="../public/js/blo.js"></script>
     <script src="https://kit.fontawesome.com/b28bfc0ccb.js" crossorigin="anonymous"></script>
-
-
+    <script>
+        const blobity = new Blobity({
+            zIndex: "20",
+            focusableElementsOffsetX: "5",
+            magnetic: "true",
+            focusableElementsOffsetY: "5",
+            font: "courier",
+            fontWeight: "400",
+            color: "'rgb(3, 255, 176)'"
+        });
+    </script>
 </body>
 
 

@@ -13,14 +13,20 @@ $(document).ready(function() {
 
 });
 
-const blobity = new Blobity({
-    zIndex: "20",
-    focusableElementsOffsetX: "5",
-    magnetic: "true",
-    focusableElementsOffsetY: "5",
-    font: "courier",
-    fontWeight: "400",
-    color: "'rgb(3, 255, 176)'"
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
 
-});
+    var currentScrollpos = window.pageYOffset;
+    if (prevScrollpos > currentScrollpos) {
+        document.getElementById("navbar").style.top = "0 ";
+    } else {
+        document.getElementById("navbar").style.top = "-200px ";
+    }
+
+    prevScrollpos = currentScrollpos;
+
+}
+
 const swup = new Swup();
+const options = { color: 'rgb(180, 180, 180)' };
+new Blobity(options);
