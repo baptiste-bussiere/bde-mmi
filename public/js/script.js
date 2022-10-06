@@ -27,6 +27,7 @@ window.onscroll = function() {
 
 }
 
+
+
+
 const swup = new Swup();
-const options = { color: 'rgb(180, 180, 180)' };
-new Blobity(options);

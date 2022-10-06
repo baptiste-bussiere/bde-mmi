@@ -19,13 +19,13 @@ header {
     margin: 2em;
     width: 100%;
     justify-content: center;
-    transition: top 250ms;
-    top: 0;
     position: fixed;
-    z-index: 900;
+    transition: top 250ms;
+    z-index: 300;
     nav {
         padding: 2em;
         border-radius: 1em;
+        background-color: #222121;
         ul {
             margin: 0;
             display: flex;
@@ -41,9 +41,10 @@ header {
                     text-decoration: none;
                     color: #fff;
                     position: relative;
-                    z-index: 900;
+                    z-index: 30;
                     &:hover {
-                        color: #222121;
+                        color: #03FFB0;
+                        text-decoration: underline;
                     }
                     img {
                         height: 2em;
@@ -56,7 +57,7 @@ header {
 }
 
 main {
-    margin-top: 10em;
+    margin-top: 9em;
     .error {
         display: flex;
         justify-content: center;
