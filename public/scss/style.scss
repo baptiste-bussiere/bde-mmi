@@ -11,10 +11,12 @@ body {
 }
 
 ::selection {
-    background-color: #00FFB0;
+    background-color: #00ffae88;
 }
 
 header {
+    top: 0;
+
     display: flex;
     margin: 2em;
     width: 100%;
@@ -22,6 +24,10 @@ header {
     position: fixed;
     transition: top 250ms;
     z-index: 300;
+    top: 0;
+    width: 1em;
+    transition: 250ms;
+    
     nav {
         padding: 2em;
         border-radius: 1em;
